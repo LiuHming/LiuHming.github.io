@@ -111,7 +111,7 @@ feed:
   content_limit_delim: ' '
   order_by: -date
 
-# Deployment
+# Deploymentcc
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
