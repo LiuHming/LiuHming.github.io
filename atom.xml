@@ -6,7 +6,7 @@
   <link href="https://liuhming.github.io/atom.xml" rel="self"/>
   
   <link href="https://liuhming.github.io/"/>
-  <updated>2022-06-07T12:53:10.752Z</updated>
+  <updated>2022-06-22T03:05:56.336Z</updated>
   <id>https://liuhming.github.io/</id>
   
   <author>
@@ -17,20 +17,103 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Android内存优化</title>
+    <link href="https://liuhming.github.io/2022/06/20/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://liuhming.github.io/2022/06/20/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/</id>
+    <published>2022-06-20T13:36:32.000Z</published>
+    <updated>2022-06-22T03:05:56.336Z</updated>
+    
+    
+    <summary type="html">一、Android内存管理机制
+1.Java对象生命周期
+ * Created
+ * Inuse——此时对象至少被一个强引用持有
+ * Invisible——对象仍然存在但程序中接下来不再持有该对象的任何强引用。
+ * UNreachable——不再被任何强引用持有
+ * Collected——当GC已经对该对象的内存空间重新分配做好准备时，对象进入收集阶段，如果该对象重写了finalize()方</summary>
+    
+    
+    
+    <category term="技术" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Android" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/Android/"/>
+    
+    <category term="优化" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/Android/%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="Android优化" scheme="https://liuhming.github.io/tags/Android%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ReactNative交互</title>
+    <link href="https://liuhming.github.io/2022/06/18/ReactNative%E4%BA%A4%E4%BA%92/"/>
+    <id>https://liuhming.github.io/2022/06/18/ReactNative%E4%BA%A4%E4%BA%92/</id>
+    <published>2022-06-18T14:01:07.000Z</published>
+    <updated>2022-06-20T13:39:21.506Z</updated>
+    
+    
+    <summary type="html">React Native与Android原生交互主要涉及三个方面：1.原生调用rn方法；2.rn调用原生方法；3.rn使用原生自定义组件
+
+Android调用RN方法
+ 1. rn注册事件
+    
+    1
+    2
+    3
+    4
+    5
+    6
+    
+    
+    const {EventEmitterManager} = NativeModules;
+    c</summary>
+    
+    
+    
+    <category term="技术" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="ReactNative" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/ReactNative/"/>
+    
+    
+    <category term="ReactNative" scheme="https://liuhming.github.io/tags/ReactNative/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ReactNative关键函数</title>
+    <link href="https://liuhming.github.io/2022/06/18/ReactNative%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0/"/>
+    <id>https://liuhming.github.io/2022/06/18/ReactNative%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0/</id>
+    <published>2022-06-18T09:04:14.000Z</published>
+    <updated>2022-06-18T13:59:51.549Z</updated>
+    
+    
+    <summary type="html">getDefaultProps
+在组件创建之前，会先调用 getDefaultProps()，这是全局调用一次，严格地来说，这不是组件的生命周期的一部分。在组件被创建并加载候，首先调用 constructor（以前是getInitialState()），来初始化组件的状态。
+
+constructor
+constructor将在任意一个RN组件被加载之前优先调用，并且只会调用一次。该函数最大的作用是</summary>
+    
+    
+    
+    <category term="技术" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="ReactNative" scheme="https://liuhming.github.io/categories/%E6%8A%80%E6%9C%AF/ReactNative/"/>
+    
+    
+    <category term="ReactNative" scheme="https://liuhming.github.io/tags/ReactNative/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面试题</title>
     <link href="https://liuhming.github.io/2022/05/24/interview/"/>
     <id>https://liuhming.github.io/2022/05/24/interview/</id>
     <published>2022-05-24T07:22:25.288Z</published>
-    <updated>2022-06-07T12:53:10.752Z</updated>
+    <updated>2022-06-18T09:34:20.732Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1-Java面试题&quot;&gt;&lt;a href=&quot;#1-Java面试题&quot; class=&quot;headerlink&quot; title=&quot;1.Java面试题&quot;&gt;&lt;/a&gt;1.Java面试题&lt;/h1&gt;&lt;h2 id=&quot;1-1Java基础&quot;&gt;&lt;a href=&quot;#1-1Java基础&quot;</summary>
-        
-      
+    <summary type="html">梳理的一些简单面试题.</summary>
     
     
     

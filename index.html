@@ -65,6 +65,213 @@
     <h1 class="page-type-title"></h1>
     
     
+    <article id="post-Android内存优化" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/06/20/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/">Android内存优化</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2022/06/20/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/" class="article-date">
+  <time datetime="2022-06-20T13:36:32.000Z" itemprop="datePublished">2022-06-20</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/Android/">Android</a> / <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/Android/%E4%BC%98%E5%8C%96/">优化</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+        一、Android内存管理机制
+1.Java对象生命周期
+ * Created
+ * Inuse——此时对象至少被一个强引用持有
+ * Invisible——对象仍然存在但程序中接下来不再持有该对象的任何强引用。
+ * UNreachable——不再被任何强引用持有
+ * Collected——当GC已经对该对象的内存空间重新分配做好准备时，对象进入收集阶段，如果该对象重写了finalize()方
+        
+          <p>
+            <a class="article-more-link" href="/2022/06/20/Android%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96/">
+              阅读原文
+            </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+        
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+    
+    <article id="post-ReactNative交互" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/06/18/ReactNative%E4%BA%A4%E4%BA%92/">ReactNative交互</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2022/06/18/ReactNative%E4%BA%A4%E4%BA%92/" class="article-date">
+  <time datetime="2022-06-18T14:01:07.000Z" itemprop="datePublished">2022-06-18</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/ReactNative/">ReactNative</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+        React Native与Android原生交互主要涉及三个方面：1.原生调用rn方法；2.rn调用原生方法；3.rn使用原生自定义组件
+
+Android调用RN方法
+ 1. rn注册事件
+    
+    1
+    2
+    3
+    4
+    5
+    6
+    
+    
+    const {EventEmitterManager} = NativeModules;
+    c
+        
+          <p>
+            <a class="article-more-link" href="/2022/06/18/ReactNative%E4%BA%A4%E4%BA%92/">
+              阅读原文
+            </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+        
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+    
+    <article id="post-ReactNative关键函数" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/06/18/ReactNative%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0/">ReactNative关键函数</a>
+</h2>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2022/06/18/ReactNative%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0/" class="article-date">
+  <time datetime="2022-06-18T09:04:14.000Z" itemprop="datePublished">2022-06-18</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a> / <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/ReactNative/">ReactNative</a>
+</div>
+
+    </div>
+    
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        
+      
+      
+        getDefaultProps
+在组件创建之前，会先调用 getDefaultProps()，这是全局调用一次，严格地来说，这不是组件的生命周期的一部分。在组件被创建并加载候，首先调用 constructor（以前是getInitialState()），来初始化组件的状态。
+
+constructor
+constructor将在任意一个RN组件被加载之前优先调用，并且只会调用一次。该函数最大的作用是
+        
+          <p>
+            <a class="article-more-link" href="/2022/06/18/ReactNative%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0/">
+              阅读原文
+            </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+        
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+    
     <article id="post-interview" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -103,326 +310,22 @@
         
       
       
-      <h1 id="1-Java面试题"><a href="#1-Java面试题" class="headerlink" title="1.Java面试题"></a>1.Java面试题</h1><h2 id="1-1Java基础"><a href="#1-1Java基础" class="headerlink" title="1.1Java基础"></a>1.1Java基础</h2><h3 id="①抽象类与接口区别"><a href="#①抽象类与接口区别" class="headerlink" title="①抽象类与接口区别"></a>①抽象类与接口区别</h3><ul>
-<li>方法：抽象类可以提供方法的实现，接口中即jdk8以后添加default关键字才可以实现默认实现</li>
-<li>参数：抽象类成员变量可以任意创建，接口只能是public static final修饰的变量</li>
-<li>构造函数：接口不能拥有构造器，静态代码块、静态方法，抽象类可以</li>
-<li>只可继承一个抽象类但是可以实现多个接口</li>
-</ul>
-<p>都不可直接实例化是共同点</p>
-<h3 id="②final、static、synchronized可以修饰什么-什么作用"><a href="#②final、static、synchronized可以修饰什么-什么作用" class="headerlink" title="②final、static、synchronized可以修饰什么 什么作用"></a>②final、static、synchronized可以修饰什么 什么作用</h3><p>final:</p>
-<ul>
-<li>类：说明该类功能已经全面了，不允许继承。String类。Interger</li>
-<li>方法：该方法不可以被子类重写.final方法编译的时候已经静态绑定了</li>
-<li>变量：变量不可变  成员变量或是局部变量修饰可以成为最终变量，配合静态static修饰变量称为常量</li>
-</ul>
-<p>static：</p>
-<ul>
-<li>代码块：类进行加载的时候会按顺序执行</li>
-<li>方法：静态方法属于类的层面，调用的时候用类名.方法名直接调用</li>
-<li>变量：静态变量，存在Java内存模型中的方法区</li>
-<li>内部类：可以直接作为一个普通类使用，不需要先实例化一个外部类实例</li>
-</ul>
-<p>synchronized：</p>
-<ul>
-<li>修饰方法：方法为静态方法为类锁，反之为对象锁</li>
-<li>修饰代码块：锁住的是类为类锁，反之为对象锁</li>
-</ul>
-<h3 id="③String、StringBuffer、StringBUilder"><a href="#③String、StringBuffer、StringBUilder" class="headerlink" title="③String、StringBuffer、StringBUilder"></a>③String、StringBuffer、StringBUilder</h3><p>String为字符串常量，如果要进行拼接+操作，会生成一个新的字符串重新赋予变量，连续拼接操作时会造成一些资源损耗还影响效率</p>
-<p>StringBuilder是线程不安全的字符串拼接工具类，append</p>
-<p>StringBuffer为线程安全的</p>
-<h3 id="④equals-hashcode"><a href="#④equals-hashcode" class="headerlink" title="④equals == hashcode"></a>④equals == hashcode</h3><p>未重写equals等方法时与==一样，对比引用是否一致</p>
-<p>一般equals与hashcode需要统一重写，保证equals为true hashcode必须为true  可反性</p>
-<h3 id="⑤Error和Exception区别"><a href="#⑤Error和Exception区别" class="headerlink" title="⑤Error和Exception区别"></a>⑤Error和Exception区别</h3><p>Error为程序运行时不可预料的错误情况，发生时会直接杀死进程</p>
-<p>Exception为运行中可预料到的异常情况，分为检查性异常与非检查型异常，检查性异常需要在编写代码时使用try catch捕获</p>
-<p>使用throw抛出的是error</p>
-<h3 id="⑥什么是反射机制"><a href="#⑥什么是反射机制" class="headerlink" title="⑥什么是反射机制"></a>⑥什么是反射机制</h3><p>java反射就是在程序运行过程中通过一些类或方法或是变量的信息对其进行获取操作</p>
-<p>获取类信息：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.getClass()</span><br><span class="line">类名.class</span><br><span class="line">Class.forName(&quot;包名+类名&quot;)</span><br></pre></td></tr></table></figure>
+        1.Java面试题
+1.1Java基础
+①抽象类与接口区别
+ * 方法：抽象类可以提供方法的实现，接口中即jdk8以后添加default关键字才可以实现默认实现
+ * 参数：抽象类成员变量可以任意创建，接口只能是public static final修饰的变量
+ * 构造函数：接口不能拥有构造器，静态代码块、静态方法，抽象类可以
+ * 只可继承一个抽象类但是可以实现多个接口
 
-<p>构造方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Constuctor[] getConstructors()：获取类中所有被public修饰的构造器</span><br><span class="line"></span><br><span class="line">Constructor getConstructor(Class...&lt;?&gt; paramTypes)：根据参数类型获取类中某个构造器，该构造器必须被public修饰</span><br><span class="line"></span><br><span class="line">Constructor[] getDeclaredConstructors()：获取类中所有构造器</span><br><span class="line"></span><br><span class="line">Constructor getDeclaredConstructor(class...&lt;?&gt; paramTypes)：根据参数类型获取对应的构造器</span><br><span class="line"></span><br><span class="line">Class clazz = Class.forName(&quot;com.bean.SmallPineapple&quot;);</span><br><span class="line"></span><br><span class="line">Constructor constructor = clazz.getConstructor(String.class, int.class);</span><br><span class="line"></span><br><span class="line">constructor.setAccessible(true);</span><br><span class="line"></span><br><span class="line">SmallPineapple smallPineapple2 = (SmallPineapple) constructor.newInstance(&quot;小菠萝&quot;, 21);</span><br><span class="line"></span><br><span class="line">smallPineapple2.getInfo();</span><br></pre></td></tr></table></figure>
-
-<p>变量：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Field[] getFields()：获取类中所有被public、protected修饰的所有变量</span><br><span class="line"></span><br><span class="line">Field getField(String name)：根据变量名获取类中的一个变量，获取是被public和protected修饰的</span><br><span class="line"></span><br><span class="line">Field[] getDeclaredFields()：获取类中所有的变量，但无法获取继承下来的变量</span><br><span class="line"></span><br><span class="line">Field getDeclaredField(String name)：根据姓名获取类中的某个变量，无法获取继承下来的变量</span><br></pre></td></tr></table></figure>
-
-<p>方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Method[] getMethods()：获取类中被public、protected修饰的所有方法</span><br><span class="line"></span><br><span class="line">Method getMethod(String name, Class...&lt;?&gt; paramTypes)：根据名字和参数类型获取对应方法，该方法必须被public、protected修饰</span><br><span class="line"></span><br><span class="line">Method[] getDeclaredMethods()：获取所有方法，但无法获取继承下来的方法</span><br><span class="line"></span><br><span class="line">Method getDeclaredMethod(String name, Class...&lt;?&gt; paramTypes)：根据名字和参数类型获取对应方法，无法获取继承下来的方法</span><br></pre></td></tr></table></figure>
-
-<p>注解：只有@Retension为RUNTIME时才能通过反射获取该注解</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Annotation[] getAnnotations()：获取该对象上的所有注解</span><br><span class="line"></span><br><span class="line">Annotation getAnnotation(Class annotaionClass)：传入注解类型，获取该对象上的特定一个注解</span><br><span class="line"></span><br><span class="line">Annotation[] getDeclaredAnnotations()：获取该对象上的显式标注的所有注解，无法获取继承下来的注解</span><br><span class="line"></span><br><span class="line">Annotation getDeclaredAnnotation(Class annotationClass)：根据注解类型，获取该对象上的特定一个注解，无法获取继承下来的注解</span><br></pre></td></tr></table></figure>
-
-<h3 id="⑦IO流分几种"><a href="#⑦IO流分几种" class="headerlink" title="⑦IO流分几种"></a>⑦IO流分几种</h3><p>IO流分为字节流和字符流，与之对应的抽象类有inputstream、outputstream、reader、writer</p>
-<p>字节流可以传递存储任何类型的数据，字符流只能处理字符、字符串，使用指定的字符集进行编码操作</p>
-<p>BIO：同步阻塞式IO  NIO：同步非阻塞 AIO：NIO升级也叫NIO2，异步非阻塞</p>
-<h3 id="⑧泛型类型擦除"><a href="#⑧泛型类型擦除" class="headerlink" title="⑧泛型类型擦除"></a>⑧泛型类型擦除</h3><p>类型擦除发生在编译过程中，所有泛型信息都会被擦除</p>
-<h3 id="⑨注解的理解"><a href="#⑨注解的理解" class="headerlink" title="⑨注解的理解"></a>⑨注解的理解</h3><p>本质：做一个标识，通过这个标识对代码规范、变量值做一些修饰。主要划分为三类</p>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th align="left">仅仅存在在.java文件，编译成.class文件就消失了。作用为：让开发者按照注解的规范编写代码。例如：<a target="_blank" rel="noopener" href="https://github.com/OverRide">@OverRide</a></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Class</td>
-<td align="left">在前期编译期的流程中，会被处理成.class内容，与原生代码效率几乎相同。<br />作用为：自动生成.class文件，做一些辅助性工作。例如：ButterKnife、GreenDao、ARouter</td>
-<td>效率和原生代码相当</td>
-</tr>
-<tr>
-<td>Runtime</td>
-<td align="left">编译成.class文件之后，依旧以注解的方式存在。而是在运行期生效。<br />作用为：在运行期，通过反射做一些辅助性工作。例如：xUtils</td>
-<td>由于集中使用遍历+反射，因此效率较低。而且在9.0禁用反射</td>
-</tr>
-</tbody></table>
-<h2 id="1-2-Java集合"><a href="#1-2-Java集合" class="headerlink" title="1.2 Java集合"></a>1.2 Java集合</h2><h3 id="①list、set、map"><a href="#①list、set、map" class="headerlink" title="①list、set、map"></a>①list、set、map</h3><p>Iterator是所有集合的总接口，Collection继承于Iterator。list有序可重复，set无序不可重复，map键值对，键唯一。</p>
-<p>list、set继承自collection。ArrayList数组结构，存储地址连续、linkedList双向链表结构。</p>
-<p>hashset哈希表实现，无序可放入null</p>
-<p>treeset是二叉树红黑树结构实现的，自动排序不允许null值</p>
-<p>hashmap hashtable concurrentHashMap、linkedhashmap</p>
-<h2 id="1-3-Java多线程"><a href="#1-3-Java多线程" class="headerlink" title="1.3 Java多线程"></a>1.3 Java多线程</h2><h3 id="①-java-多线程的方式"><a href="#①-java-多线程的方式" class="headerlink" title="① java 多线程的方式"></a>① java 多线程的方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 继承Thread，重写run方法，用start启动</span><br><span class="line">2. 自定义runnable，放入thread启动</span><br><span class="line">3.通过线程池、callable、future实现有返回结果的多线程</span><br></pre></td></tr></table></figure>
-
-<h3 id="②-线程的状态"><a href="#②-线程的状态" class="headerlink" title="② 线程的状态"></a>② 线程的状态</h3><ul>
-<li>new 创建状态</li>
-<li>runnable 运行</li>
-<li>blocked 阻塞</li>
-<li>waiting 等待</li>
-<li>timed_waiting 超时等待</li>
-<li>end 终止</li>
-</ul>
-<h3 id="③-实现多线程中的同步"><a href="#③-实现多线程中的同步" class="headerlink" title="③ 实现多线程中的同步"></a>③ 实现多线程中的同步</h3><ul>
-<li><p>volatile 简单逻辑可以实现 简单的 set get</p>
-</li>
-<li><p>synchronized</p>
-</li>
-<li><p>reentrantlock</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1. Lock lock = new ReentrantLock();</span><br><span class="line">   try &#123;</span><br><span class="line">            todo.........</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            lock.unlock();</span><br><span class="line">        &#125;</span><br><span class="line">也可以尝试获取锁</span><br><span class="line">if (lock.tryLock(1, TimeUnit.SECONDS)) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125; finally &#123;</span><br><span class="line">        lock.unlock();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">2.配合condition的await和signal模仿obj的wait、notify</span><br><span class="line">3.  ReadWriteLock rwlock = new ReentrantReadWriteLock();</span><br><span class="line">    Lock rlock = rwlock.readLock();</span><br><span class="line">    Lock wlock = rwlock.writeLock();</span><br></pre></td></tr></table></figure></li>
-<li><p>cas   unsafe类</p>
-</li>
-<li><p>Object.wait/notify</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wait属于object类中的方法，调用后释放锁，将当前线程a放入该对象锁的等待池，线程b执行notify会通知等待池，使线程a从等待池进入阻塞队列等到线程b释放锁后线程a竞争锁继续执行。</span><br><span class="line">notifyall会把等待池里所有的线程唤醒去竞争</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="④-线程池"><a href="#④-线程池" class="headerlink" title="④ 线程池"></a>④ 线程池</h3><ul>
-<li><p>常见线程池</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Executors.newFixedThreadPool 使用的是linkedblockingqueue  指定核心线程数</span><br><span class="line">Executors.newCachedThreadPool 使用的是SynchronousQueue</span><br><span class="line">Executors.newSingleThreadExecutor 使用的是LinkedBlokingQueue</span><br><span class="line">Executors.newScheduledThreadPool</span><br><span class="line"></span><br><span class="line">ThreadPoolExecutor  核心线程数 最大线程数 超时回收时间 时间单位 任务处理队列 线程工厂</span><br></pre></td></tr></table></figure>
-
-<p>核心线程-》阻塞队列-》非核心线程-》handler拒绝任务提交</p>
-</li>
-<li><p>常见的任务处理阻塞队列<br>ArrayBlockingQueue 有界数组阻塞队列<br>LinkedBlockingQueue 无界链表阻塞队列<br>SynchronousQueue 无存储队列<br>PriorityBlockingQueue 优先级阻塞队列</p>
-</li>
-<li><p>shutdown 关闭线程池——等添加到线程池中的任务全部完成才退出<br>shutdownNow  关闭线程池并中断任务  调用Tread.interrupt中断任务 但线程无sleep、wait、condition、定时锁等是无法中断新城，有可能需要等所有线程执行完毕关闭</p>
-</li>
-</ul>
-<h3 id="⑤-synchronized与volatile"><a href="#⑤-synchronized与volatile" class="headerlink" title="⑤ synchronized与volatile"></a>⑤ synchronized与volatile</h3><p>volatile：</p>
-<ol>
-<li>保证变量在不同线程进行操作的可见性</li>
-<li>禁止指令重排<br>指令重排是指指令乱序执行，有时在条件允许情况下，为了避开获取一条指令所需的数据而造成的等待，会通过乱序执行提高效率。添加一个内存屏障，指令乱序时不能把后面的指令排序移到内存屏障之前</li>
-</ol>
-<p>synchronize：</p>
-<p>偏向锁、轻量级锁。自旋锁、重量级锁</p>
-<h3 id="⑥-死锁"><a href="#⑥-死锁" class="headerlink" title="⑥ 死锁"></a>⑥ 死锁</h3><p>当线程a持有独占锁1，并尝试去获取独占锁2的同时，线程b持有独占锁2，并尝试获取独占锁1，这时两个线程都出去获取对方的独占锁处于阻塞状态，产生了死锁。</p>
-<ol>
-<li>互斥条件：一个资源只能被一个线程使用 独占锁</li>
-<li>请求与保持条件：一个线程因请求资源被阻塞，对已获得的资源保持不释放</li>
-<li>不剥夺条件： 线程获得资源在未使用完之前，不能强行剥夺</li>
-<li>循环等待：若干线程之间形成头尾相接的循环资源等待关系</li>
-</ol>
-<p>解决办法：</p>
-<ol>
-<li>加锁顺序控制 按照一定顺序加锁</li>
-<li>加锁时限 线索尝试获取锁时加上时限，超时则放弃对锁的请求，并释放自己占有的锁</li>
-<li>死锁检测 加锁时将线程与锁存在类似map中，每当有线程请求锁失败时可以判断是否有循环锁占有和请求的关系进行处理</li>
-</ol>
-<h3 id="⑦-线程、进程"><a href="#⑦-线程、进程" class="headerlink" title="⑦ 线程、进程"></a>⑦ 线程、进程</h3><p>一个程序至少有一个进程，一个进程至少有一个线程</p>
-<ol>
-<li>进程是资源分配最小单位，线城市程序执行的最小单位。</li>
-<li>进程有自己独立的地址空间，每启动一个进程系统会为其分配地址空间。线程没有独立的地址空间，统一进程的线程共享进程的地址空间</li>
-<li>进程之间资源独立，同一进程内线程共享本晋城资源</li>
-<li>每个独立进程有一个运行入口，顺序执行队列和程序出口。线程不能独立执行，依存于程序进程中</li>
-</ol>
-<h3 id="⑧-ThreadLocal"><a href="#⑧-ThreadLocal" class="headerlink" title="⑧ ThreadLocal"></a>⑧ ThreadLocal</h3><ol>
-<li>原理：<br>每一个tread内部维护了一个threadlocalmap，内部维护了一个数组，数组里面存储的数据是一个entry内部类，key为threadlocal的弱引用，value为我们要存储的数据的强引用。<br>set方法：从当前线程获取他的localthreadmap，根据hashcode与数组长度计算在数组中存储的位置，分为几个情况<br>如果以前在当前位置存储过，更新后返回，发生hash冲突依次向后寻找。返回<br>如果当前key为null，也就是被回收了，会先向前遍历直到entry为空，找到第一个该回收的位置，然后再向后遍历查找是否和当前key匹配的有的话进行位置交换及清理,返回<br>如果没有存储过就直接新建存储，进行清理并检查需不需要扩容；<br>在执行get操作时，从当前线程获取他的localthreadmap，根据threadlocal的hashcode与数组长度计算存储的数组位置，通过当前的threadlocal获取我们存储的值。</li>
-<li>内存泄漏：因为value为强引用，threadlocal回收后未去回收他的value就会发生内存泄漏，不用时应该保证执行remove或保证与线程生命周期相同</li>
-</ol>
-<h2 id="1-4-Java内存"><a href="#1-4-Java内存" class="headerlink" title="1.4 Java内存"></a>1.4 Java内存</h2><h3 id="①-类的加载"><a href="#①-类的加载" class="headerlink" title="① 类的加载"></a>① 类的加载</h3><ul>
-<li>android中有5个类加载器：ClassLoader（所有类加载器的抽象基类）、BootClassLoader（用于加在android系统的类，classloader的内部类，开发者无法调用）、BaseDexClassLoader（继承ClassLoader）、PathClassLoader（继承于BaseDexClassLoader，通常用于加载我们自己写的类含第三方库，但不局限于此）、DexClassLoader（继承于BaseDexClassLoader，通常用于执行动态加载，能够加在指定路径的apk、jar、zip、dex文件，因此很多热修复和插件化方案使用）</li>
-<li>加载时使用双亲委派模式加载，先以递归方式向上级父加载器验证是否已经加载，若没被加载过在从最顶级加载器进行加载操作，加载失败逐级向下进行加载。保证类只会被加载一次。</li>
-<li>加载（通过类的全限定名获取类的二进制字节流，将静态存储结构转化为方法区的运行数据结构，在内存中生成Class对象，作为这个类的各种数据的方位入口）-》<br>连接（1.验证——语法是否通过；2.准备——变量分配内存；3.解析——接口、字段和方法的符号引用转为直接引用）-》<br>初始化（对变量和一些代码块进行初始化及执行）</li>
-</ul>
-<h3 id="②-引用类型"><a href="#②-引用类型" class="headerlink" title="② 引用类型"></a>② 引用类型</h3><ol>
-<li>强引用：垃圾回收器不会回收，及时内存空间不足，jvm宁愿outofmemoryerror程序异常终止也不随意回收强引用对象</li>
-<li>软引用：如果一个对象只有软引用，内存够用的时候不会对其进行回收，当内存不足时hiuduiqijinxinghuishou，可以和引用队列联合使用</li>
-<li>弱引用：如果一个对象只有弱引用，垃圾回收器检测到就会对其进行回收。由于垃圾回收器所在线程优先级很低不一定会快发现，可以和引用队列联合使用</li>
-<li>虚引用：任何时候都可能被回收，主要用于跟踪对象呗垃圾回收器回收的活动。必须与ReferenceQueue联合使用</li>
-</ol>
-<h3 id="③-Java内存模型"><a href="#③-Java内存模型" class="headerlink" title="③ Java内存模型"></a>③ Java内存模型</h3><ol>
-<li>堆  对象</li>
-<li>栈  线程栈帧 线程私有</li>
-<li>本地方发栈</li>
-<li>方法区 加载的类信息、常量、静态变量、即时编译器编译后的代码</li>
-<li>程序计数器</li>
-</ol>
-<h3 id="④-Java内存回收机制"><a href="#④-Java内存回收机制" class="headerlink" title="④ Java内存回收机制"></a>④ Java内存回收机制</h3><ul>
-<li><p>回收检测有两种：<br>引用计数法：有对这个对象的引用+1，不再引用-1<br>可达性分析：以GCRoots对象为起点，从这个节点从上到下搜索，路径称为引用链，当一个对象没有任何引用链与GCRoots连接时，就说明当前对象不可达可以回收<br>GC Roots对象通常包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">虚拟机栈中引用的对象——栈帧中的本地变量表</span><br><span class="line">方法中类的静态属性引用的对象</span><br><span class="line">方法区常量引用的对象</span><br><span class="line">Native方法引用的对象</span><br></pre></td></tr></table></figure></li>
-<li><p>回收算法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1. 标记清除：</span><br><span class="line">   扫描并标记存活目标，标记完成后再扫描未标记的对象对其进行回收。存活对象多时效率高</span><br><span class="line">但是会造成内存碎片。</span><br><span class="line">2. 标记整理：</span><br><span class="line">   在标记清除基础上，将存活的内存进行移动整理更新指针。适合对象存活率高的场景——老</span><br><span class="line">年代回收。</span><br><span class="line">3. 复制：</span><br><span class="line">   将内存分为大小相等两块，每次只是用一块。当内存使用完后，将存活对象复制到另一侧，</span><br><span class="line">再将该区域全部清除。适用于对象存活率低情况——新生代。</span><br><span class="line">4. 分代收集：</span><br><span class="line">   不同的对象生命周期不同，不同的生命周期的对象放置在堆中的不同区域，以不同的策略</span><br><span class="line">进行回收提高效率。新生代使用复制算法；老年代使用标记清除或标记整理。分代收集一般分</span><br><span class="line">为新生代，老年代和永久代。</span><br><span class="line">   新生代：所有新对象首先都放在新生代，按照8：1：1比例分为一个Eden区和两个survivor区。</span><br><span class="line">大部分对象在Eden区生成，回收时先将Eden存活对象复制到survivor0然后清空Eden，</span><br><span class="line">当这survivor0存放满，将Eden区域survivor0中存活的对象复制到survivor1中，</span><br><span class="line">清空Eden与survivor0，然后将survivor0与survivor1互换保证survivor1为空。</span><br><span class="line">当survivor1不足存放时就会将存活对象存放至老年代。若是老年代满了就会出发full GC，</span><br><span class="line">也就是新老年代都进行回收。新生代的GC叫做MinorGC发生频率高。</span><br><span class="line">   老年代： 内存大概是新生代的两倍，老年代中的对象存活时间长。</span><br><span class="line">   永久代： 主要存放静态文件，如java类、方法等。对垃圾回收没有显著影响，用来解决</span><br><span class="line">动态代理或是反射等等运行中新增的类的内存。</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="⑤-jvm、dalvik和art"><a href="#⑤-jvm、dalvik和art" class="headerlink" title="⑤ jvm、dalvik和art"></a>⑤ jvm、dalvik和art</h3><ul>
-<li>jvm：java虚拟机，并不是某个特定虚拟机的实现，而是任何能运行java字节码的虚拟机实现</li>
-<li>dalvik：是google创建的用于android的虚拟机，但其严格来说不算jvm，5.0被art替代<br>基于寄存器，jvm基于堆栈；有自己的字节码不是java字节码；jit即时编译</li>
-<li>art：android run time。4.4-6.0采用安装时全部编译为机器码的方式实现，7.0开始默认不全部编译，采用解释执行+jit+空闲时间aot以改善安装耗时。<br>aot预编译在安装过程中，将所有字节码变异成机器码，运行时直接调用。</li>
-</ul>
-<h1 id="2-Kotlin"><a href="#2-Kotlin" class="headerlink" title="2 Kotlin"></a>2 Kotlin</h1><h2 id="2-1-kotlin语言特性"><a href="#2-1-kotlin语言特性" class="headerlink" title="2.1 kotlin语言特性"></a>2.1 kotlin语言特性</h2><h3 id="①-介绍kotlin其特性"><a href="#①-介绍kotlin其特性" class="headerlink" title="① 介绍kotlin其特性"></a>① 介绍kotlin其特性</h3><ul>
-<li>能与java互相调用</li>
-<li>减少样板代码</li>
-<li>可将kotlin编译为无需虚拟机就可以运行的原生二进制文件</li>
-<li>支持高阶函数</li>
-<li>支持协程</li>
-<li>语言层面解决空指针问题</li>
-<li>对lambda表达式更好地支持</li>
-</ul>
-<h3 id="②-JvmOverloads作用"><a href="#②-JvmOverloads作用" class="headerlink" title="② @JvmOverloads作用"></a>② @JvmOverloads作用</h3><p>在有默认参数值的方法中使用@JvmOverloads注解会重载多个方法。</p>
-<h3 id="③-kotlin中单例与java对比"><a href="#③-kotlin中单例与java对比" class="headerlink" title="③ kotlin中单例与java对比"></a>③ kotlin中单例与java对比</h3><ol>
-<li><p>线程不安全饿汉式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">kotlin：</span><br><span class="line">object Single&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">java：</span><br><span class="line">class Single &#123;</span><br><span class="line">    private static Single instance = new Single();</span><br><span class="line"></span><br><span class="line">    public static Single getInstance()&#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>线程不安全懒汉式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">kotlin：</span><br><span class="line">class Single&#123;</span><br><span class="line">    companion object&#123;</span><br><span class="line">        val instance by lazy &#123; Single() &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">java：</span><br><span class="line">class Single &#123;</span><br><span class="line">    private static Single instance;</span><br><span class="line"></span><br><span class="line">    public static Single getInstance()&#123;</span><br><span class="line">        if (instance == null)&#123;</span><br><span class="line">            instance = new Single();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>双重校验</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">kotlin：</span><br><span class="line">class Single&#123;</span><br><span class="line">    companion object&#123;</span><br><span class="line">        val instance by lazy(LazyThreadSafetyMode.SYNCHRONIZED) &#123; Single() &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">java:</span><br><span class="line">class Single &#123;</span><br><span class="line">    private volatile static Single instance;</span><br><span class="line"></span><br><span class="line">    public static Single getInstance()&#123;</span><br><span class="line">        if (instance == null)&#123;</span><br><span class="line">            synchronized (Single.class)&#123;</span><br><span class="line">                if (instance == null)&#123;</span><br><span class="line">                    instance = new Single();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>静态内部类</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">kotlin：</span><br><span class="line">class Single&#123;</span><br><span class="line">    companion object&#123;</span><br><span class="line">        val instance = SingleHolder.Single</span><br><span class="line">    &#125;</span><br><span class="line">    private object SingleHolder&#123;</span><br><span class="line">        val Single = Single()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">java：</span><br><span class="line">class Single &#123;</span><br><span class="line">    private static class SingleHolder&#123;</span><br><span class="line">        public static final Single holder = new Single();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static Single getInstance()&#123;</span><br><span class="line">        return SingleHolder.holder;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="④-dataClass"><a href="#④-dataClass" class="headerlink" title="④ dataClass"></a>④ dataClass</h3><p>会自动生成equals/hashCode方法、toString、componentN解构方法和copy方法</p>
-<h3 id="⑤-with、run、also、apply、let"><a href="#⑤-with、run、also、apply、let" class="headerlink" title="⑤ with、run、also、apply、let"></a>⑤ with、run、also、apply、let</h3><ul>
-<li>let、also、apply、let都是作为扩展函数，传入一个lambda表达式<br>let：返回值是最后一行或return的数据<br>also： 返回的是对象本身，this表示可省略<br>run：返回最后一行的值或表达式<br>apply：返回本身<br>let与also会将属性作为参数传入lambda中，所以使用属性需要用it表示，let返回lambda执行结果，also返回属性值<br>run与apply传入的lambda是带属性T的接受者对象的函数，run返回的是执行结果，apply是返回属性this</li>
-<li>with 是传入两个参数，第一个是属性值，第二个是属性的扩展lambda函数并返回</li>
-</ul>
-<h3 id="⑥-Unit与Void区别"><a href="#⑥-Unit与Void区别" class="headerlink" title="⑥ Unit与Void区别"></a>⑥ Unit与Void区别</h3><p>Unit：Kotlin中Any的子类，作为返回类型时可省略</p>
-<p>Void：java中无返回类型时使用，关键字，不可行略</p>
-<p>nothing：一般形容无法继续执行，常常和抛出异常一起使用</p>
-<h3 id="⑦-关键修饰符"><a href="#⑦-关键修饰符" class="headerlink" title="⑦ 关键修饰符"></a>⑦ 关键修饰符</h3><ol>
-<li>中缀函数 infix 定义的函数必须只有一个参数，可省略.与参数括号</li>
-<li>密封类 sealed 表示受限的类继承结构，本身是抽象类不可以实例化，必须和子类在同一个包中</li>
-<li>init函数执行顺序： 主构造函数 &gt; init &gt; 次级构造函数</li>
-<li>object 与 companion object 的区别** object 有两层语义：静态匿名内部类 + 单例对象 companion object 是伴生对象，一个类只能有一个，代表了类的静态成员（函数 / 属性）</li>
-<li>inner 非静态内部类， kotlin内部类默认是静态内部类，如果要使用类中成员方法和属性需要加inner</li>
-<li>inline 内联函数，表示将函数内容。如果我们是用lambda表达式作为参数，lambda在编译后转换为匿名类或是静态对象会造成额外开销。<br>noinline 当函数被inline标记，参数使用该标记不使用内联，不可return主函数<br>crossinline 允许内联函数里的函数类型参数可以被间接调用，但是不能在Lambda表达式中使用全局return返回</li>
-</ol>
-<h3 id="⑧-any与object区别"><a href="#⑧-any与object区别" class="headerlink" title="⑧ any与object区别"></a>⑧ any与object区别</h3><ul>
-<li>相同：都是顶级父类</li>
-<li>差异：any只声明toString/equeals/hashcode作为成员方法,没有wait、notify、clone、finalize等，属于兼容java平台的平台类型。</li>
-</ul>
-<h3 id="⑨-委托"><a href="#⑨-委托" class="headerlink" title="⑨ 委托"></a>⑨ 委托</h3><ul>
-<li><p>Observable</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var name: String by Delegates.observable(初始值)&#123;prop,old,new -&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>自定义委托 ReadOnlyProperty、ReadWriteProperty、PropertyDelegateProvider</p>
-</li>
-<li><p>懒加载委托</p>
-</li>
-</ul>
-<h2 id="2-2-协程"><a href="#2-2-协程" class="headerlink" title="2.2 协程"></a>2.2 协程</h2><h3 id="①-协程的使用"><a href="#①-协程的使用" class="headerlink" title="① 协程的使用"></a>① 协程的使用</h3><ul>
-<li>协程通过CoroutineScope创建，启动方式有三种：1.runBlocking——启动一个新协程并阻塞调用他的线程，直到里面的代码执行完毕，返回最后一行；2.launch——启动一个协程不会阻塞调用线程，必须在协程作用域中才能调用，返回job；3.async——启动一个协程不会阻塞调用线程，必须在协程作用域中才能调用。返回Deferred（继承job）。</li>
-<li>GlobalScope全局顶级协程，这个协程是在整个应用程序生命周期内运行的。使用launch、async。</li>
-<li>suspend是协程关键字，代表挂起函数，只能在suspend方法或者在协程中调用。</li>
-</ul>
-<h1 id="3-android"><a href="#3-android" class="headerlink" title="3 android"></a>3 android</h1><h2 id="3-1-各框架原理"><a href="#3-1-各框架原理" class="headerlink" title="3.1 各框架原理"></a>3.1 各框架原理</h2><h3 id="①-LeakCanary"><a href="#①-LeakCanary" class="headerlink" title="① LeakCanary"></a>① LeakCanary</h3><p>目前最新版本仅用debugImplementation就可以实现内存泄漏监听。这是利用了ContentProVider进行初始化，在应用启动时回调他的oncreate方法。在oncreate方法里面进行他的多种watcher的安装。内部创建对于activity、fragmentAndViewModel、rootView、service的watcher，并依次进行install操作。</p>
-<p>ContentProVider的oncreate在于application的oncreate（handleBindApplication），</p>
-<p>晚于application的attachBaseContext。</p>
-<p>先进性对应该回收对象的生命周期加入钩子。</p>
-<ol>
-<li>ActivityWatcher会在install操作中通过by noOpDelegate委托生成动态代理 application.registerActivityLifecycleCallbacks对其进行onActivityDestroyed监听，当activity调用ondestroyed时会进行内部ObjectWatcher的expectWeaklyReachable方法，检查五秒后是否被回收，未被回收则标记内存泄漏。</li>
-<li>FragmentAndViewModelWatcher在开始与ActivityWatcher一样，不过是注册activity的onactivityCreated监听。在oncreate的时候对他的fragmentwatcher数组依次进行。</li>
-<li>RootViewWatcher是使用Curtains的onRootViewsChangedListeners，在detached的时候验证</li>
-<li>ServiceWatcher是通过反射activityThread拿到mservices，对activityThread中的handler的mcallback进行动态代理，在service真正destroy的时候进行验证</li>
-</ol>
-<p>ObjectWatcher进行对象的是否内存泄漏检查：</p>
-<ol>
-<li>先移除已被回收的对象</li>
-<li>用UUID生成一个key，然后同观察对象、描述、引用队列等创建弱引用。并根据key将reference存入map里。</li>
-<li>在默认5s延迟后再清理一遍，检测对象是否被回收</li>
-<li>没有回收调用onObjectRetainedListener</li>
-</ol>
-<p>objectRetainedListener里面主要执行heapDumpTrigger的一些方法</p>
-<ol>
-<li>首先判断是否有异常持有的对象，有的话触发Gc操作，没有就返回</li>
-<li>如果还有异常判断泄露数量是否达到dump</li>
-<li>达到的话会进行dumpHeap</li>
-<li>然后使用HeapAnalyzerService，启动shark分析</li>
-<li>读取hprof内存快照文件</li>
-<li>找到leakCanary标记的泄露对象的数量和弱引用包装的ids</li>
-<li>找到gcRoot开始的路径</li>
-</ol>
-<h3 id="②-Eventbus"><a href="#②-Eventbus" class="headerlink" title="② Eventbus"></a>② Eventbus</h3><p>EventBus.getdefault方法其实是一个双重校验的单例方法，内部涉及几个map</p>
-<p>首先是一个method_Cache的concurrentHashmap，他的key是类信息，value是解析过的方法数组</p>
-<p>subscriptionsByEventType，key是event的类信息，value是存储subscription的copyOnWriteArrayList</p>
-<p>在我们register的时候。</p>
-<ol>
-<li>首先获取注册类信息，并对其进行方法的提取</li>
-<li>在method＿cache查找是否有解析过的缓存</li>
-<li>没有的话，先创建一个findState维护类的相关数据。</li>
-<li>通过反射拿到类里面的所有方法，通过方法的修饰符（必须public，非static，非abstract）和参数数目进行过滤，再将过滤出的方法进行自己的注解比对</li>
-<li>完全符合会根据注解获取threadmode等等和其他信息整理成一个subscibermethod，存放在findstate的监听方法数组里</li>
-<li>在检查父类有没有相应的方法需要添加，当获取所有方法完毕后，对这些方法依次进行subscriber操作</li>
-<li>将注册对象与subscibermethod封装成一个subscription，然后再存在subscriptionsByEventType的当前eventType的数组里</li>
-<li></li>
-</ol>
-<p>在我们post事件时</p>
-<ol>
-<li>将事件存放在threadlocal里的postingState的eventQueue里</li>
-<li>取出第一个event，获取他的类信息，在eventTypesCache里面找有没有event数组，里面是当前事件及其基类的class对象和接口基类的class对象</li>
-<li>然后对这些事件进行分发处理，在subscriptionsByEventType找到对应的subscription数组。</li>
-<li>将每一个subscription与当前事件、当前线程是否主线程共同传入postToSubscription方法中</li>
-<li>通过当前线程是否是主线程和subscription中的threadMode进行判断，决定是否切换线程，不需要切换直接反射调用。</li>
-<li>需要切换线程时，再将subscription与event封装一起发送到指定线程执行。</li>
-</ol>
-<h3 id="③-retrofit"><a href="#③-retrofit" class="headerlink" title="③ retrofit"></a>③ retrofit</h3><ol>
-<li>首先在retrofit记录下配置的calladapterFactories和converterFactories</li>
-<li>在执行retrofit.create的时候，先验证apiService的合法性，再进行动态代理实现具体方法。</li>
-<li>object或是platform的方法直接执行</li>
-<li>RequestFactory的parseAnnotations方法解析method中的注解</li>
-<li>然后传递给HttpServiceMethod创建OKhttpCall并进行adapt操作</li>
-<li>根据我们的callAdapterFactory包装成我们指定的call对象，默认是retrofitCall</li>
-<li>创建request对象使用okhttp进行请求，拿到结果后通过配置的converterFactory解析成我们指定的数据格式</li>
-</ol>
-<h3 id="④-okhttp"><a href="#④-okhttp" class="headerlink" title="④ okhttp"></a>④ okhttp</h3><ul>
-<li>大概流程：</li>
-</ul>
-<ol>
-<li>通过建造者模式构建okhttp和request</li>
-<li>okhttpClient通过newCall发起请求</li>
-<li>通过分发器维护请求队列和线程池，完成接口调配</li>
-<li>通过五大默认拦截器完成请求重试，缓存处理，建立连接等一些列操作</li>
-<li>得到结果完成回调</li>
-</ol>
-<ul>
-<li>okhttp分发器工作流程：</li>
-</ul>
-<p>分发器主要维护请求队列与线程池</p>
-<p>同步任务请求不需要线程池，只需按照加入队列的顺序请求</p>
-<p>异步请求则要进行判断正在执行的任务未超过最大限制64，同时同一host的请求不超过5个，添加在正在执行队列，同时提交给线程池。否则加入到等待队列。每个任务完成后都会调用分发器的finished方法，在等待队列中取出等待队列的任务继续执行。</p>
-<ul>
-<li>拦截器</li>
-</ul>
-<p>执行getResponseWithInterceptorChain方法是使用了责任链模式，依次进行重试与重定向拦截器、桥接拦截器、缓存拦截器、连接拦截器、自定义拦截器和请求拦截器。分别负责重试重定向、处理header、缓存、连接池等</p>
-<h3 id="⑤-Android与js交互"><a href="#⑤-Android与js交互" class="headerlink" title="⑤ Android与js交互"></a>⑤ Android与js交互</h3><p>js调用Android</p>
-<ul>
-<li>创建一个处理交互的方法类，在方法上面添加@JavascriptInterface，再执行webview.addJavascriptinterface()进行映射。</li>
-<li>通过 <code>WebViewClient</code>的shouldoverrideUrl()进行链接拦截处理</li>
-<li>通过 <code>WebChromeClient</code>的onjsaler confirm prompt</li>
-</ul>
-<p>android 调用 js</p>
-<ul>
-<li>webview.loadurl（“<code>javascript:</code>”）</li>
-<li><code>WebView.evaluateJavascript(</code>)</li>
-</ul>
-<p>webview优化</p>
-<p>1.独立进程，android：process 退出system。exit</p>
-<p>2.预加载 建立webview维护类。使用mutablecontextwrapper 优先传入applicationcontext，后面可以通过重新设置basecontext更改绑定特定的activity</p>
-<h3 id="⑥-其他"><a href="#⑥-其他" class="headerlink" title="⑥ 其他"></a>⑥ 其他</h3><p>多渠道包：productflavor配置不同applicationid，将公有库统一维护，各自业务使用风味名+implement进行引用，一些第三方库的一些秘钥使用manifestplaceholder进行维护</p>
-<p>intentservice是继承service来创建工作线程，内部原理是在oncreate的时候创建一个handlerthread和他的servicehandler，在onstartcommand里面会点用onstart进行message的发送，在连续进行任务时可以按顺序进行处理。在任务都处理完成之后会自动结束。</p>
-
+共同点是都不可直接实
+        
+          <p>
+            <a class="article-more-link" href="/2022/05/24/interview/">
+              阅读原文
+            </a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
